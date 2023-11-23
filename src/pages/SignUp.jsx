@@ -60,7 +60,7 @@ const SignUp = (props) => {
       else {
         console.log(NewUser)
         setloadSignUp(0);
-        navigate('/Vikart_Official')
+        navigate('/')
       }
     }
     else {

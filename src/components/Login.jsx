@@ -36,11 +36,10 @@ const Login = () => {
             setloadSignUp(0)
         }
         else {
-
             const data = await respon.json();
             console.log(data)
             if (data.password == formData.password) {
-                navigate('/Vikart_Official')
+                navigate('/')
                 setloadSignUp(0)
             }
             else{
