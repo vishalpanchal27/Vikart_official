@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Spinner from '../components/spinner/Spinner'
+import Admin from '../pages/Admin'
 
 const Login = () => {
     const [loadingSignUp, setloadSignUp] = useState(0)
@@ -22,31 +23,54 @@ const Login = () => {
 
     const handleSignUp = async (event) => {
         event.preventDefault();
-        console.log(formData.email)
         setloadSignUp(1);
-        const respon = await fetch(`https://ecom-otdq.onrender.com/getUserEmail/${formData.email}`, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            },
-        })
 
-        if (respon.status === 404) {
-            alert("Invalid Email")
-            setloadSignUp(0)
+        //  for admin
+        if (formData.email == 'admin@gmail.com' && formData.password == 1234) {
+            const Adminrespon = await fetch(`https://ecom-otdq.onrender.com/getrequist`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            if (Adminrespon.status === 201) {
+                const TablesData = await Adminrespon.json()
+                console.log(TablesData)
+                setloadSignUp(0)
+                navigate('/Admin')
+            }
+            else {
+                alert("Something went wrong please try again")
+            }
+
         }
         else {
-            const data = await respon.json();
-            console.log(data)
-            if (data.password == formData.password) {
-                navigate('/Vikart_Official')
+            const respon = await fetch(`https://ecom-otdq.onrender.com/getUserEmail/${formData.email}`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+            })
+
+            if (respon.status === 404) {
+                alert("Invalid Email")
                 setloadSignUp(0)
             }
-            else{
-                alert("Invalid Password")
-                setloadSignUp(0)
+            else if (respon.status === 201) {
+                const data = await respon.json();
+                // console.log(data)
+                if (data.password == formData.password) {
+                    navigate('/Vikart_Official')
+                    setloadSignUp(0)
+                }
+                else {
+                    alert("Invalid Password")
+                    setloadSignUp(0)
+                }
             }
-            //    console.log(formData)
+            else {
+                alert("try again")
+            }
         }
     }
 
@@ -85,7 +109,7 @@ const Login = () => {
                 <p className='text-gray-400 text-sm'>By continuing, you agree to Amazon's Conditions of Use and Privacy Notice.</p>
             </form>
             {loadingSignUp ?
-        (<Spinner />) : console.log("this")}
+                (<Spinner />) : console.log("this")}
         </div>
     )
 }

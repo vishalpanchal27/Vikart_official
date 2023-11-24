@@ -36,8 +36,8 @@ const SignUp = (props) => {
         "Username": formData.username,
         "password": formData.password,
         "email": formData.email,
-        "Favourite":0,
-        "cart":0
+        "Favourite": 0,
+        "cart": 0
       }
 
       setloadSignUp(1);
@@ -57,10 +57,14 @@ const SignUp = (props) => {
         setloadSignUp(0)
         alert("Please fill the form")
       }
-      else {
+      else if (respon.status === 201) {
         console.log(NewUser)
         setloadSignUp(0);
         navigate('/Vikart_Official')
+      }
+      else {
+        setloadSignUp(0)
+        alert("Try again May server busy")
       }
     }
     else {
