@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Spinner from '../components/spinner/Spinner'
+import { toast } from 'react-toastify'
 // import Admin from '../pages/Admin'
 
 const Login = () => {
@@ -21,6 +22,7 @@ const Login = () => {
         })
     }
 
+    
     const handleSignUp = async (event) => {
         event.preventDefault();
         setloadSignUp(1);
@@ -60,11 +62,13 @@ const Login = () => {
                 const data = await respon.json();
                 // console.log(data)
                 if (data.password === formData.password) {
+                    toast.success('login successfully 😊')
                     navigate('/Vikart_Official')
                     setloadSignUp(0)
                 }
                 else {
-                    alert("Invalid Password")
+                    // alert("Invalid Password")
+                    toast.warning('Id and Password not matched')
                     setloadSignUp(0)
                 }
             }
