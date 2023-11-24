@@ -165,7 +165,7 @@ const Detail = () => {
                             </p>
                         </button>
                         <button className='bg-yellow-600 p-2  text-gray-200 w-64 flex flex-row justify-center'>
-                            <p className='flex justify-center'>
+                            <p className='flex justify-center' onClick={()=>toast.success('your order is successfully placed 😊')} >
                                 <span className='pt-1'><GiElectric /></span> Buy
                             </p>
                         </button>

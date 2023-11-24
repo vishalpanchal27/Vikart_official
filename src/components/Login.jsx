@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Spinner from '../components/spinner/Spinner'
-import Admin from '../pages/Admin'
+// import Admin from '../pages/Admin'
 
 const Login = () => {
     const [loadingSignUp, setloadSignUp] = useState(0)
@@ -26,7 +26,7 @@ const Login = () => {
         setloadSignUp(1);
 
         //  for admin
-        if (formData.email == 'admin@gmail.com' && formData.password == 1234) {
+        if (formData.email === 'admin@gmail.com' && formData.password === 1234) {
             const Adminrespon = await fetch(`https://ecom-otdq.onrender.com/getrequist`, {
                 method: "GET",
                 headers: {
@@ -59,7 +59,7 @@ const Login = () => {
             else if (respon.status === 201) {
                 const data = await respon.json();
                 // console.log(data)
-                if (data.password == formData.password) {
+                if (data.password === formData.password) {
                     navigate('/Vikart_Official')
                     setloadSignUp(0)
                 }

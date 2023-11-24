@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 
 const CartFooter = () => {
     const cartTotal = useSelector((state) => state.cartFakeFavData);
@@ -13,7 +14,7 @@ const CartFooter = () => {
                 <p>Total Items: {cartTotal.length}</p>
                 <p>Total Price: {(total * 50).toFixed(2)} </p>
             </div>
-            <button className='bg-yellow-600 font-bold py-1 px-5 rounded-md '>PLACE ORDER</button>
+            <button className='bg-yellow-600 font-bold py-1 px-5 rounded-md ' onClick={() => toast.success('your order is successfully placed 🎉✨')} >PLACE ORDER</button>
         </div>
     );
 };

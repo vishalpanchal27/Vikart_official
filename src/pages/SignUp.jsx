@@ -1,6 +1,6 @@
 // import { toHaveStyle } from '@testing-library/jest-dom/matchers';
 import React, { useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa'
 import { toast } from 'react-toastify';
 import Spinner from '../components/spinner/Spinner'
