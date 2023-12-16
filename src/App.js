@@ -23,7 +23,7 @@ function App() {
       <ApiCall />
       <Routes>
         <Route path='/loginPage' element={<MainPage />} />
-        <Route path='/E-commerce' element={<Home />} />
+        <Route path='/Vikart' element={<Home />} />
         <Route path='/detail' element={<Detail />} />
         <Route path='/favourite' element={<Cart />} />
         <Route path='/cart' element={<Favourite />} />
