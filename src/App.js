@@ -11,7 +11,7 @@ import SignUp from './pages/SignUp';
 import MainPage from './pages/MainPage';
 import Search from './components/Search';
 import ApiCall from './ApiCalls/ApiCall';
-import Admin  from "./pages/Admin";
+import Admin from "./pages/Admin";
 // import NotFound from './pages/NotFound';
 
 
@@ -30,12 +30,13 @@ function App() {
         <Route path='/signUp' element={<SignUp />} />
         <Route path='/search' element={<Search />} />
         <Route path="/Admin" element={<Admin />} />
+        <Route Path="loginCalls" element={<loginCalls />} />
       </Routes>
       <HomePageApi />
-
-
-
     </div>
+
+
+
   );
 }
 

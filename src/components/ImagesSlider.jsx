@@ -26,9 +26,9 @@ const ImagesSlider = () => {
 
 
     return (
-        <div className=' h-[30rem] '>
+        <div className=' h-[30rem] relative z-0 bg-slate-100'>
             {!loading &&
-                <div className=''>
+                <div className='bg-slate-100'>
                     <div className='flex flex-col relative'>
                         <TopOffers />
                     </div>

@@ -6,10 +6,11 @@ const FavouriteSlice = createSlice({
     reducers: {
         addToFav(state, action) {
             state.push(action.payload)
+            console.log(state)
         },
         removeFromFav(state, action) {
             const idToRemove = action.payload.id;
-            return state.filter((item) => item.id !== idToRemove);
+            return state.filter((item) => item.id !== idToRemove);  // This should be updated to use Immer
         }
     }
 })

@@ -2,12 +2,14 @@ import React from 'react'
 import { AiTwotoneStar } from "react-icons/ai"
 import { FcLikePlaceholder, FcLike } from 'react-icons/fc'
 import { useDispatch, useSelector, shallowEqual } from 'react-redux'
+import { removeFromFav } from '../redux/slices/FavouriteSlice'
 import { add, remove } from '../redux/slices/CartSlice'
 import { getDetailData } from '../redux/slices/ProductDetailSlice'
+import { RiDeleteBin6Line } from 'react-icons/ri'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 
-const Card = ({ image, title, price, available, rating, id, altImages }) => {
+const Card = ({ image, title, price, available, rating, id, altImages, itsCart }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const cart = useSelector((state) => state.cart || [], shallowEqual)
@@ -40,13 +42,13 @@ const Card = ({ image, title, price, available, rating, id, altImages }) => {
 
   const removeFromCart = (id) => {
     toast.warning('Remove from your Favourite List')
+    console.log(id)
     dispatch(remove(id))
   }
   const addToCart = (image, title, orgPrice, available, rating, id) => {
     toast.success('Add in your Favourite List')
     dispatch(add(image, id, title, orgPrice, available, rating))
   }
-
   return (
     <div className='flex justify-center rounded-2xl hover:border-2 hover:border-gray-200 my-2 hover:shadow-xl border-transparent border-2 overflow-hidden p-2 cursor-pointer relative '>
       <div className='absolute z-10 top-3 right-5'>
@@ -85,17 +87,21 @@ const Card = ({ image, title, price, available, rating, id, altImages }) => {
             )}
 
           </div>
-          {
-            available === 'IN_STOCK' ? (
-              <p className='font-bold text-green-700' >Available</p>
-            ) : (
-              <p className='font-bold text-red-700'>Out of Stock</p>
-            )
-          }
-          {(Math.floor(orgPrice * 50) > 999) ?
-            (<p className='text-xs'>Free delivery</p>) :
-            (<p className='text-xs'>₹50 Delivery Charge </p>)
-          }
+          <div className='flex justify-between items-center'>
+            <div className=''>
+              {
+                available === 'IN_STOCK' ? (
+                  <p className='font-bold text-green-700' >Available</p>
+                ) : (
+                  <p className='font-bold text-red-700'>Out of Stock</p>
+                )
+              }
+              {(Math.floor(orgPrice * 50) > 999) ?
+                (<p className='text-xs'>Free delivery</p>) :
+                (<p className='text-xs'>₹50 Delivery Charge </p>)
+              }
+            </div>
+          </div>
         </div>
       </div>
     </div>

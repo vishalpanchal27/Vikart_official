@@ -38,7 +38,11 @@ const Home = () => {
       <div className={`flex justify-center relative xl:top-16 lg:top-0 md:top-[-3rem] sm:top-0 h-full bg-slate-100 ${window.innerWidth < 430 ? 'top-[-2rem]' : ''} `}>
         <div className='grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xl:w-10/12 lg:w-11/12 place-items-center gap-5 overflow-hidden place-content-center p-5 lg:gap-x-12 md:gap-x-5 relative '>
           {loading ?
-            (<Spinner />) :
+            (
+              <div className='h-[19rem]'>
+                <Spinner />
+              </div>
+            ) :
             (
               productData.map((data) => (
                 <div key={data.item.tcin}>

@@ -6,6 +6,7 @@ import Spinner from '../components/spinner/Spinner'
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart)
+  console.log(cart)
   const loading = useSelector((state) => state.productData.loading)
   return (
     <div className='bg-slate-100'>

@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    background-color: #F5F7FA;
 }
 
 .slider {
@@ -54,4 +55,5 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #F5F7FA;
 }

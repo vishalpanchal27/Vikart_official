@@ -15,8 +15,17 @@ const Detail = () => {
     const productDetail = useSelector((state) => state.productDetail)
     const { rating, orgPrice, image, title, available, id } = productDetail.data
     const cart = useSelector((state) => state.cart || [], shallowEqual)
-    const [productImage, setProductImage] = useState()
+    const [productImage, setProductImage] = useState(productDetail.data.image)
     const [showOffers, setShowOffers] = useState(false)
+    const dataObject = {
+        rating,
+        orgPrice,
+        image,
+        title,
+        available,
+        id
+    }
+
 
     const changeImageHandler = (image) => {
         setProductImage(image)
@@ -60,7 +69,7 @@ const Detail = () => {
                     <div className=' overflow-hidden flex flex-col'>
                         <div className='flex justify-center '>
                             <div className='xl:h-[35rem] xl:w-[28rem] lg:h-[35rem] lg:w-[28rem] md:h-[22rem] md:w-[22rem] h-[15rem] w-[15rem] cursor-grab flex flex-row my-3 justify-center'>
-                                <img src={productImage ? (productImage) : (productDetail.data.image)} alt="" className='h-full' />
+                                <img src={productImage} alt="" className='h-full' />
                             </div>
                         </div>
                         <div className='flex flex-row flex-wrap justify-center'>
@@ -165,7 +174,7 @@ const Detail = () => {
                             </p>
                         </button>
                         <button className='bg-yellow-600 p-2  text-gray-200 w-64 flex flex-row justify-center'>
-                            <p className='flex justify-center' onClick={()=>toast.success('your order is successfully placed 😊')} >
+                            <p className='flex justify-center' onClick={() => toast.success('your order is successfully placed 😊')} >
                                 <span className='pt-1'><GiElectric /></span> Buy
                             </p>
                         </button>

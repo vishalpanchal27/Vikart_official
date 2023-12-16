@@ -106,14 +106,14 @@ const ApiCall = () => {
 
     const options = {
         method: 'GET',
-        url: 'https://real-time-product-search.p.rapidapi.com/search',
+        // url: 'https://real-time-product-search.p.rapidapi.com/search',
         params: {
             q: `${search}`,
             country: 'us',
             language: 'en'
         },
         headers: {
-            'X-RapidAPI-Key': 'b2af1f2cf7msh6a3cec92e90d7aep1c9421jsn7e194ab85a4f',
+            'X-RapidAPI-Key': 'f6d69c5d55msh18ac11238468099p187b7fjsne31f5136332a',
             'X-RapidAPI-Host': 'real-time-product-search.p.rapidapi.com'
         }
     };
