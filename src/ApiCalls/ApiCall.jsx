@@ -106,7 +106,7 @@ const ApiCall = () => {
 
     const options = {
         method: 'GET',
-        // url: 'https://real-time-product-search.p.rapidapi.com/search',
+        url: 'https://real-time-product-search.p.rapidapi.com/search',
         params: {
             q: `${search}`,
             country: 'us',
