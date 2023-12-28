@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Vikart_official/static/css/main.62aadcbb.css",
-    "main.js": "/Vikart_official/static/js/main.712d9278.js",
+    "main.js": "/Vikart_official/static/js/main.d828051e.js",
     "static/js/787.8287823c.chunk.js": "/Vikart_official/static/js/787.8287823c.chunk.js",
     "static/media/Online Shopping (HD).png": "/Vikart_official/static/media/Online Shopping (HD).54867e0bf16b28643463.png",
     "static/media/Gift Box (HD).png": "/Vikart_official/static/media/Gift Box (HD).52c396679972d73d1f6a.png",
@@ -23,11 +23,11 @@
     "static/media/kitchen.jpg": "/Vikart_official/static/media/kitchen.cbe3919d087e6dec389a.jpg",
     "index.html": "/Vikart_official/index.html",
     "main.62aadcbb.css.map": "/Vikart_official/static/css/main.62aadcbb.css.map",
-    "main.712d9278.js.map": "/Vikart_official/static/js/main.712d9278.js.map",
+    "main.d828051e.js.map": "/Vikart_official/static/js/main.d828051e.js.map",
     "787.8287823c.chunk.js.map": "/Vikart_official/static/js/787.8287823c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.62aadcbb.css",
-    "static/js/main.712d9278.js"
+    "static/js/main.d828051e.js"
   ]
 }
