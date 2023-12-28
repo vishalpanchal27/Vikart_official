@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/Vikart_official/static/css/main.62aadcbb.css",
+    "main.js": "/Vikart_official/static/js/main.712d9278.js",
+    "static/js/787.8287823c.chunk.js": "/Vikart_official/static/js/787.8287823c.chunk.js",
+    "static/media/Online Shopping (HD).png": "/Vikart_official/static/media/Online Shopping (HD).54867e0bf16b28643463.png",
+    "static/media/Gift Box (HD).png": "/Vikart_official/static/media/Gift Box (HD).52c396679972d73d1f6a.png",
+    "static/media/giphy2.gif": "/Vikart_official/static/media/giphy2.ac45b8f9d4da7028cbf1.gif",
+    "static/media/Store.png": "/Vikart_official/static/media/Store.25094c3d655db2a16d1e.png",
+    "static/media/first.jpg": "/Vikart_official/static/media/first.b3ca49395de66ed0fda3.jpg",
+    "static/media/Happy Shopping.png": "/Vikart_official/static/media/Happy Shopping.7fcc0ea962417138362e.png",
+    "static/media/fifth.jpg": "/Vikart_official/static/media/fifth.2a4edeedf739d992bb5d.jpg",
+    "static/media/third.jpg": "/Vikart_official/static/media/third.c13141d7c1290c668844.jpg",
+    "static/media/second.jpg": "/Vikart_official/static/media/second.559e369cb58c72797d94.jpg",
+    "static/media/fourth.jpg": "/Vikart_official/static/media/fourth.f53fc9dc721ebd605656.jpg",
+    "static/media/grocery.jpg": "/Vikart_official/static/media/grocery.b2b12bbc9074fd406d3f.jpg",
+    "static/media/fashion.jpg": "/Vikart_official/static/media/fashion.d1d48cebbc66a75a631c.jpg",
+    "static/media/tv and application.jpg": "/Vikart_official/static/media/tv and application.6a9cebadc745ab575a1c.jpg",
+    "static/media/toys.jpg": "/Vikart_official/static/media/toys.94dec81cfea1cf809e62.jpg",
+    "static/media/mobile.jpg": "/Vikart_official/static/media/mobile.a9af59e17341db9b2279.jpg",
+    "static/media/electronics.jpg": "/Vikart_official/static/media/electronics.c0ff4639906b01bd3c69.jpg",
+    "static/media/furniture.jpg": "/Vikart_official/static/media/furniture.a06539bbe7887b649c0c.jpg",
+    "static/media/kitchen.jpg": "/Vikart_official/static/media/kitchen.cbe3919d087e6dec389a.jpg",
+    "index.html": "/Vikart_official/index.html",
+    "main.62aadcbb.css.map": "/Vikart_official/static/css/main.62aadcbb.css.map",
+    "main.712d9278.js.map": "/Vikart_official/static/js/main.712d9278.js.map",
+    "787.8287823c.chunk.js.map": "/Vikart_official/static/js/787.8287823c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.62aadcbb.css",
+    "static/js/main.712d9278.js"
+  ]
+}
