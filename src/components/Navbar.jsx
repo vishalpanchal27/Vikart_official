@@ -100,7 +100,7 @@ const Navbar = () => {
                                     >
                                         <ul className='flex flex-col gap-5'>
                                             {
-                                                <NavLink to='/Vikart'>
+                                                <NavLink to='/Vikart_Official'>
                                                     <li className='text-lg mt-2 cursor-pointer flex' onClick={() => setMenu(!menu)}> <span className='pt-1 pr-1'><BiHomeAlt2 /></span>  HOME</li>
                                                 </NavLink>
                                             }
